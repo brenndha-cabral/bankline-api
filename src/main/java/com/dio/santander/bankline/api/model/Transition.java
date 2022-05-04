@@ -1,7 +1,6 @@
 package com.dio.santander.bankline.api.model;
 
 import java.time.LocalDateTime;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -10,8 +9,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import net.bytebuddy.implementation.bytecode.constant.IntegerConstant;
 
 @Entity
 @Table(name = "transition")
