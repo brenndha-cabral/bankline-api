@@ -11,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import net.bytebuddy.implementation.bytecode.constant.IntegerConstant;
+
 @Entity
 @Table(name = "transition")
 public class Transition {
@@ -21,7 +23,10 @@ public class Transition {
 	private LocalDateTime dateHour;
 	private String description;
 	private Double value;
+	@Column(name = "id_account")
+	private Integer idAccount;
 	
+
 	private TransitionType type;
 	
 	@Enumerated(EnumType.STRING)
@@ -64,5 +69,13 @@ public class Transition {
 	public void setValue(Double value) {
 		this.value = value;
 	}	
+	
+	public Integer getIdAccount() {
+		return idAccount;
+	}
+
+	public void setIdAccount(Integer idAccount) {
+		this.idAccount = idAccount;
+	}
 
 }
