@@ -2,16 +2,29 @@ package com.dio.santander.bankline.api.model;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "transition")
 public class Transition {
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	@Column(name = "date_hour")
 	private LocalDateTime dateHour;
 	private String description;
 	private Double value;
 	
 	private TransitionType type;
 	
-
+	@Enumerated(EnumType.STRING)
 	public TransitionType getType() {
 		return type;
 	}

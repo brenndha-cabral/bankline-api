@@ -1,7 +1,9 @@
 package com.dio.santander.bankline.api.model;
 
+import javax.persistence.Embeddable;
+
+@Embeddable
 public class Account {
-	
 	private Long number;
 	private Double balance;
 
