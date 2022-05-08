@@ -25,9 +25,9 @@ public class TransitionService {
 		Double value = newTransition.getType() == TransitionType.INCOME ? newTransition.getValue() : newTransition.getValue() * -1;
 
 		transition.setDateHour(LocalDateTime.now());
-		transition.setDescription(transition.getDescription());
-		transition.setIdAccount(transition.getIdAccount());
-		transition.setType(transition.getType());
+		transition.setDescription(newTransition.getDescription());
+		transition.setIdAccount(newTransition.getIdAccount());
+		transition.setType(newTransition.getType());
 		transition.setValue(value);
 		
 		Client client = clientRepository.findById(newTransition.getIdAccount()).orElse(null);
