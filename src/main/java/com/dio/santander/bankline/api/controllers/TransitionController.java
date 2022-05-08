@@ -30,4 +30,7 @@ public class TransitionController {
 	public void save(@RequestBody NewTransition transition) {
 		service.save(transition);
 	}
+	@GetMapping("/{idAccount}")
+	public List<Transition> findAll(@PathVariable("idAccount") Integer idAccount){
+		return repository.findByIdAccount(idAccount);
 }
