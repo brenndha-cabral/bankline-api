@@ -33,4 +33,5 @@ public class TransitionController {
 	@GetMapping("/{idAccount}")
 	public List<Transition> findAll(@PathVariable("idAccount") Integer idAccount){
 		return repository.findByIdAccount(idAccount);
+	}
 }
