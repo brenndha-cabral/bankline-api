@@ -13,6 +13,7 @@ import com.dio.santander.bankline.api.model.Transition;
 import com.dio.santander.bankline.api.repository.ClientRepository ;
 import com.dio.santander.bankline.api.repository.TransitionRepository;
 import com.dio.santander.bankline.api.service.TransitionService;
+import org.springframework.web.bind.annotation.PathVariable;
 
 
 @RestController
