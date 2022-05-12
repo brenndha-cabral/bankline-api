@@ -8,31 +8,31 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.dio.santander.bankline.api.dto.NewTransition;
-import com.dio.santander.bankline.api.model.Transition;
+import com.dio.santander.bankline.api.dto.NewTransaction;
+import com.dio.santander.bankline.api.model.Transaction;
 import com.dio.santander.bankline.api.repository.ClientRepository ;
-import com.dio.santander.bankline.api.repository.TransitionRepository;
-import com.dio.santander.bankline.api.service.TransitionService;
+import com.dio.santander.bankline.api.repository.TransactionRepository;
+import com.dio.santander.bankline.api.service.TransactionService;
 import org.springframework.web.bind.annotation.PathVariable;
 
 
 @RestController
-@RequestMapping("/transitions")
-public class TransitionController {
+@RequestMapping("/transactions")
+public class TransactionController {
 	@Autowired
-	private TransitionRepository repository;
+	private TransactionRepository repository;
 	@Autowired
-	private TransitionService service;
+	private TransactionService service;
 	@GetMapping
-	public List<Transition> findAll() {
+	public List<Transaction> findAll() {
 		return repository.findAll();
 	}
 	@PostMapping
-	public void save(@RequestBody NewTransition transition) {
-		service.save(transition);
+	public void save(@RequestBody NewTransaction transaction) {
+		service.save(transaction);
 	}
 	@GetMapping("/{idAccount}")
-	public List<Transition> findAll(@PathVariable("idAccount") Integer idAccount){
+	public List<Transaction> findAll(@PathVariable("idAccount") Integer idAccount){
 		return repository.findByIdAccount(idAccount);
 	}
 }

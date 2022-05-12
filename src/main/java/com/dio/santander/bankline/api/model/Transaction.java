@@ -13,8 +13,8 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
-@Table(name = "transition")
-public class Transition {
+@Table(name = "transaction")
+public class Transaction {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -27,14 +27,14 @@ public class Transition {
 	private Integer idAccount;
 	
 
-	private TransitionType type;
+	private TransactionType type;
 	
 	@Enumerated(EnumType.STRING)
-	public TransitionType getType() {
+	public TransactionType getType() {
 		return type;
 	}
 
-	public void setType(TransitionType type) {
+	public void setType(TransactionType type) {
 		this.type = type;
 	}
 

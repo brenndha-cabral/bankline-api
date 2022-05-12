@@ -4,13 +4,13 @@ import javax.persistence.Column;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 
-import com.dio.santander.bankline.api.model.TransitionType;
+import com.dio.santander.bankline.api.model.TransactionType;
 
-public class NewTransition {
+public class NewTransaction {
 	private String description;
 	private Double value;
 	private Integer idAccount;
-	private TransitionType type;
+	private TransactionType type;
 
 	public String getDescription() {
 		return description;
@@ -36,11 +36,11 @@ public class NewTransition {
 		this.idAccount = idAccount;
 	}
 
-	public TransitionType getType() {
+	public TransactionType getType() {
 		return type;
 	}
 
-	public void setType(TransitionType type) {
+	public void setType(TransactionType type) {
 		this.type = type;
 	}
 

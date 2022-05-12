@@ -1,6 +1,6 @@
 package com.dio.santander.bankline.api.model;
 
-public enum TransitionType {
+public enum TransactionType {
 	INCOME,
 	EXPENSES
 }
