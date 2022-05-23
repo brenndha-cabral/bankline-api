@@ -1,7 +1,7 @@
 ## :construction: Under construction :construction:
 <br/>
 <p align="center">
-    <img src="./public/assets/images/banner.png" alt="" width="1000">
+    <img src="./public/assets/images/bankline-api.png" alt="" width="1000">
 
   <h3 align="center">Bankline API by <a href="https://www.linkedin.com/in/brenndhacabral/">Brenndha Cabral</a></h3>
  <br/>
